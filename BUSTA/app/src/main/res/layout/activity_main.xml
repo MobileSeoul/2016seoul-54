@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabHost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4e4e4e"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    layout="@layout/header"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/list_background"
+                        android:scaleType="fitXY"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/img_list"
+                        android:layout_alignLeft="@id/img_list"
+                        android:layout_alignRight="@id/img_list"
+                        android:layout_alignTop="@id/img_list"
+                        android:gravity="center"
+                        android:paddingLeft="1dp"
+                        android:text="공연 목록"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:typeface="sans"/>
+                </RelativeLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="1dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="3dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="번호" />
+                        <TextView
+                            android:layout_width="7dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="날짜" />
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="시간" />
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="장소" />
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="팀명" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <ListView
+                    android:id="@+id/lv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#b1b1b1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"></ListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="10dp"
+                    layout="@layout/header"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/request_background1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="공연 신청"
+                        android:textSize="25dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="팀명"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:layout_weight="0.20"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/TeamName"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="0.80" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1.3">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="날짜"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:layout_weight="0.20"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+
+
+                        <EditText
+                            android:id="@+id/Date2"
+                            android:singleLine="true"
+                            android:inputType="date"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.35"
+                            />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="월"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_weight="0.10"
+                            />
+
+                        <EditText
+                            android:id="@+id/Date3"
+                            android:singleLine="true"
+                            android:inputType="date"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.35"
+                            />
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_weight="0.10"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="2.0">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="시간"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:layout_weight="0.20"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/Time1"
+                            android:singleLine="true"
+                            android:inputType="time"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.40" />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_weight="0.10"
+                            />
+
+                        <EditText
+                            android:id="@+id/Time2"
+                            android:singleLine="true"
+                            android:inputType="time"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.40" />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="분"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_weight="0.10"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="장소"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:layout_weight="0.20"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/Place"
+                            android:singleLine="true"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="0.80" />
+
+                    </LinearLayout><LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="연락처"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:layout_weight="0.20"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/PhoneNum"
+                        android:singleLine="true"
+                        android:inputType="phone"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.80" />
+
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="이메일"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:layout_weight="0.20"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"/>
+
+                        <EditText
+                            android:id="@+id/Email"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="0.80" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+
+
+
+                    <Button
+                        android:id="@+id/request"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/request_background2"
+                        android:layout_gravity="bottom"
+                        android:text="신청 완료"
+                        android:textSize="25dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4e4e4e"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    layout="@layout/header"/>
+
+                <ImageView
+                    android:id="@+id/iv_rhkdwkd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:layout_margin="7dp"
+                    android:scaleType="fitXY"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/main_slider1"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:scaleType="fitXY"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/main_slider2"
+                    android:id="@+id/imageView3" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:layout_weight="1"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="1dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="3dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="번호" />
+                        <TextView
+                            android:layout_width="7dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="날짜" />
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="시간" />
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="장소" />
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:background="#b1b1b1"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="팀명" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <ListView
+                    android:id="@+id/lv_main_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="#b1b1b1"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginBottom="7dp"></ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4e4e4e"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    layout="@layout/header"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/square_image1"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/square_image2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:background="@drawable/square_image3"/>
+
+
+                <Button
+                    android:id="@+id/btn_rego"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:background="@drawable/square_image4"/>
+
+            </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#1c1c1c"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"></TabWidget>
+    </RelativeLayout>
+</TabHost>

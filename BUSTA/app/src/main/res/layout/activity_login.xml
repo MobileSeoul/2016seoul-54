@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#ffffff">
+
+    <!--로그인 로고-->
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:id="@+id/longin_logo"
+        android:src="@drawable/login_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+
+
+        >
+
+        <!--아이디 입력-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f7941d"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:src="@drawable/login_id"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:id="@+id/login_id"
+                android:background="#ffffff"
+                />
+
+        </LinearLayout>
+
+        <!--비밀번호 입력-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f7941d"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:src="@drawable/login_pass"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:background="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginRight="1dp"
+                android:inputType="textPassword"
+                android:id="@+id/login_pw" />
+
+        </LinearLayout>
+
+        <!--자동로그인, 비밀번호 찾기-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자동로그인"
+                android:id="@+id/auto_login"
+                android:gravity="left|center"
+                android:checked="false"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="비밀번호찾기"
+                android:gravity="right|center"
+                android:id="@+id/find_pw"
+                />
+
+
+        </LinearLayout>
+
+        <!--로그인 버튼-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/login_button"
+            android:layout_gravity="center"
+            android:onClick="onClick"
+            android:background="@drawable/login_login"
+            />
+
+        <!--회원가입-->
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">BUSTA_Chat</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_dpush">MainActivity</string>
+
+    <!-- Strings related to login -->
+    <string name="title_activity_login">Join</string>
+    <string name="prompt_username">What\'s your nickname?</string>
+    <string name="prompt_userage">What\'s your age?</string>
+
+    <string name="action_sign_in">Join</string>
+    <string name="action_sign_in_short">Join</string>
+
+    <string name="title_activity_prodkey">Product key</string>
+    <string name="prompt_prodkey">What\'s your product key?</string>
+
+    <string name="action_prodkey_in">Send</string>
+    <string name="action_prodkey_in_short">Send</string>
+
+
+    <string name="prompt_message">Message</string>
+    <string name="action_show_userlist">Show userlist</string>
+    <string name="action_update_custermerinfo">Change user info</string>
+    <string name="action_change_prodkey">Change the product key</string>
+
+    <string name="action_send">Send</string>
+
+    <string name="message_welcome">--- Welcome to BUSTA Chat --–</string>
+    <plurals name="message_participants">
+        <item quantity="one">there\'s %d participant</item>
+        <item quantity="other">there are %d participants</item>
+    </plurals>
+    <string name="message_user_joined">%s joined</string>
+    <string name="message_user_left">%s left</string>
+    <string name="user_action_typing">is typing</string>
+
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="error_field_required">This field is required</string>
+    <string name="error_age_number_required">Please input the number</string>
+
+    <string name="key">0bc088c0fb9ae3bbb30994</string>
+</resources>

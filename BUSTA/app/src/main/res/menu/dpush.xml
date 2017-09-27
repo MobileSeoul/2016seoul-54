@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:orientation="vertical"
+      tools:context=".DPushActivity">
+    <item android:id="@+id/action_change_prodkey"
+          android:title="@string/action_change_prodkey"
+          android:orderInCategory="100"/>      
+    <item android:id="@+id/action_update_custermerinfo"
+          android:title="@string/action_update_custermerinfo"
+          android:orderInCategory="100"/>  
+    <item android:id="@+id/action_show_userlist"
+          android:title="@string/action_show_userlist"
+          android:orderInCategory="100"/>
+</menu>
+<!--          app:showAsAction="never"/> -->

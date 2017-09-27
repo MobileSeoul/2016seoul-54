@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="username0">#FFFF00</color>
+    <color name="username1">#0000ff</color>
+    <color name="username2">#FF00FF</color>
+    <color name="username3">#FF0000</color>
+    <color name="username4">#00FFFF</color>
+    <color name="username5">#008000</color>
+    <color name="username6">#FFD700</color>
+    <color name="username7">#FFC0CB</color>
+    <color name="username8">#FF4500</color>
+    <color name="username9">#FF6347</color>
+    <color name="username10">#FAFAD2</color>
+    <color name="username11">#F0E68C</color>
+
+    <array name="username_colors">
+        <item>@color/username0</item>
+        <item>@color/username1</item>
+        <item>@color/username2</item>
+        <item>@color/username3</item>
+        <item>@color/username4</item>
+        <item>@color/username5</item>
+        <item>@color/username6</item>
+        <item>@color/username7</item>
+        <item>@color/username8</item>
+        <item>@color/username9</item>
+        <item>@color/username10</item>
+        <item>@color/username11</item>
+    </array>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4e4e4e">
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/header"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/review_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/review_background"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="닉네임"
+            android:textColorHint="#eaa550"
+            android:layout_weight="0.3"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="제목"
+            android:textColorHint="#eaa550"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_weight="0.3" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:hint="내용"
+            android:textColorHint="#eaa550"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/review_send"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="0.2"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:background="@drawable/review_writeup"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
